@@ -1923,11 +1923,11 @@ end
 -- Creates the plugin window
 function draw()
     local globalVars = {
-        keyboardMode = false,
+        keyboardMode = true,
         dontReplaceSV = false,
         upscroll = false,
-        colorThemeIndex = 3,
-        styleThemeIndex = 1,
+        colorThemeIndex = 8,
+        styleThemeIndex = 3,
         effectFPS = 60,
         cursorTrailIndex = 1,
         cursorTrailShapeIndex = 1,
@@ -4883,8 +4883,8 @@ end
 --    settingVars : list of variables used for the current menu [Table]
 function chooseArcPercent(settingVars) 
     local oldPercent = settingVars.arcPercent
-    local _, newPercent = imgui.SliderInt("Arc Percent", oldPercent, 1, 99, oldPercent.."%%")
-    newPercent = clampToInterval(newPercent, 1, 99)
+    local _, newPercent = imgui.SliderInt("Arc Percent", oldPercent, 1, 99999, oldPercent.."%%")
+    newPercent = clampToInterval(newPercent, 1, 99999)
     settingVars.arcPercent = newPercent 
     return oldPercent ~= newPercent 
 end
@@ -5452,7 +5452,7 @@ function chooseNumPeriods(settingVars)
     local oldPeriods = settingVars.periods
     local _, newPeriods = imgui.InputFloat("Periods/Cycles", oldPeriods, 0.25, 0.25, "%.2f")
     newPeriods = forceQuarter(newPeriods)
-    newPeriods = clampToInterval(newPeriods, 0.25, 20)
+    newPeriods = clampToInterval(newPeriods, 0.25, 20000)
     settingVars.periods = newPeriods
     return oldPeriods ~= newPeriods
 end
