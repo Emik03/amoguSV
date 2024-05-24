@@ -1,3 +1,6 @@
+> [!WARNING]  
+> This branch constantly rebases from [`upstream/main`](https://github.com/kloi34/amoguSV/tree/main), as it's intended for my own personal use. Do not make local changes on this branch. If you like my settings except for that *one* thing, make your own fork off [`upstream`](https://github.com/kloi34/amoguSV) instead.
+
 # amoguSV
 <img src="https://user-images.githubusercontent.com/53842237/126182216-381a7104-7814-4661-8f80-fcb3a5034398.png" alt="amoguSV Logo" width=320px height=160px>
 
