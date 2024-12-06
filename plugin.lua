@@ -6309,7 +6309,7 @@ function chooseNumPeriods(settingVars)
     local oldPeriods = settingVars.periods
     local _, newPeriods = imgui.InputFloat("Periods/Cycles", oldPeriods, 0.25, 0.25, "%.2f")
     newPeriods = forceQuarter(newPeriods)
-    newPeriods = clampToInterval(newPeriods, 0.25, 20)
+    newPeriods = clampToInterval(newPeriods, 0.25, 2000)
     settingVars.periods = newPeriods
     return oldPeriods ~= newPeriods
 end
